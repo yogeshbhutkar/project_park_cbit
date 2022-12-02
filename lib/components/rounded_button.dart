@@ -15,16 +15,26 @@ class RoundButton extends StatelessWidget {
       child: Container(
         width: MediaQuery.of(context).size.width * 0.8,
         height: 60.0,
-        decoration: const BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(16)),
-            color: Color.fromARGB(255, 189, 6, 42)
-            // gradient: LinearGradient(
-            //   colors: [
-            //     const Color(0xFFFC466B).withOpacity(0.85),
-            //     const Color(0xFF3F5EFB).withOpacity(0.21),
-            //   ],
-            // ),
+        decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.8), //color of shadow
+              spreadRadius: 5, //spread radius
+              blurRadius: 69, // blur radius
+              offset: Offset(0, 4), // changes position of shadow
+              //first paramerter of offset is left-right
+              //second parameter is top to down
             ),
+          ],
+          borderRadius: BorderRadius.all(Radius.circular(16)),
+          color: Color(0xff2F286F),
+          // gradient: LinearGradient(
+          //   colors: [
+          //     const Color(0xFFFC466B).withOpacity(0.85),
+          //     const Color(0xFF3F5EFB).withOpacity(0.21),
+          //   ],
+          // ),
+        ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

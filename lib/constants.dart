@@ -47,9 +47,9 @@ const KDrawerTextStyleLight = TextStyle(color: Colors.black);
 
 const kTextFieldDecoration = InputDecoration(
   filled: true,
-  fillColor: Color.fromARGB(255, 17, 17, 17),
+  fillColor: Colors.white,
   hintStyle: TextStyle(
-    color: Colors.white,
+    color: Color(0xff777777),
   ),
   contentPadding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 20.0),
   border: OutlineInputBorder(
@@ -60,7 +60,7 @@ const kTextFieldDecoration = InputDecoration(
     borderRadius: BorderRadius.all(Radius.circular(8)),
   ),
   focusedBorder: OutlineInputBorder(
-    borderSide: BorderSide(color: Color.fromARGB(255, 163, 6, 37), width: 2.0),
+    borderSide: BorderSide(color: Color(0xff6A64AF), width: 2.0),
     borderRadius: BorderRadius.all(Radius.circular(8)),
   ),
 );

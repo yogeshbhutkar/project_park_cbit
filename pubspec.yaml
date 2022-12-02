@@ -42,6 +42,7 @@ dependencies:
   auto_size_text: ^3.0.0
   auth_buttons: ^3.0.0
   firebase_auth: ^4.1.5
+  iconsax: ^0.0.8
 
 dev_dependencies:
   flutter_test:

@@ -30,7 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.white,
         body: ModalProgressHUD(
           inAsyncCall: showSpinner,
           child: Padding(
@@ -51,7 +51,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           style: GoogleFonts.barlow(
                             textStyle: const TextStyle(
                                 fontSize: 40,
-                                color: Colors.white,
+                                color: Color.fromARGB(255, 71, 63, 153),
                                 fontWeight: FontWeight.w600),
                           ),
                           maxLines: 2,
@@ -62,7 +62,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   Padding(
                     padding: const EdgeInsets.only(bottom: 10, top: 45),
                     child: TextField(
-                      style: const TextStyle(color: Colors.white),
+                      style: const TextStyle(color: Colors.black),
                       keyboardType: TextInputType.emailAddress,
                       onChanged: (value) {
                         setState(() {
@@ -78,7 +78,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     height: 8.0,
                   ),
                   TextField(
-                      style: const TextStyle(color: Colors.white),
+                      style: const TextStyle(color: Colors.black),
                       obscureText: true,
                       onChanged: (value) {
                         password = value;
@@ -91,13 +91,13 @@ class _LoginScreenState extends State<LoginScreen> {
                   const Padding(
                     padding: EdgeInsets.all(15.0),
                     child: Divider(
-                      color: Color.fromARGB(255, 196, 9, 46),
+                      color: Color(0xff6A64AF),
                     ),
                   ),
                   Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 15),
                       child: GoogleAuthButton(
-                        themeMode: ThemeMode.dark,
+                        themeMode: ThemeMode.light,
                         onPressed: () async {
                           final googleUser = await googleSignIn.signIn();
                           if (googleUser == null) return;
@@ -127,7 +127,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         const Text(
                           'Don’t have an account ?',
                           textAlign: TextAlign.center,
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: Colors.black),
                         ),
                         TextButton(
                           onPressed: () {
@@ -136,7 +136,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           child: const Text(
                             'Register',
                             textAlign: TextAlign.center,
-                            style: TextStyle(color: Colors.white),
+                            style: TextStyle(color: Colors.black),
                           ),
                         ),
                       ],

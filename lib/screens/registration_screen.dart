@@ -57,7 +57,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       body: ModalProgressHUD(
         inAsyncCall: showSpinner,
         child: Padding(
@@ -76,7 +76,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       maxLines: 1,
                       style: GoogleFonts.barlow(
                         textStyle: const TextStyle(
-                          color: Colors.white,
+                          color: Color.fromARGB(255, 71, 63, 153),
                           fontSize: 45,
                           fontWeight: FontWeight.w600,
                         ),
@@ -146,13 +146,13 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   const Padding(
                     padding: EdgeInsets.all(15.0),
                     child: Divider(
-                      color: Color.fromARGB(255, 196, 9, 46),
+                      color: Color(0xff6A64AF),
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 15),
                     child: GoogleAuthButton(
-                      themeMode: ThemeMode.dark,
+                      themeMode: ThemeMode.light,
                       onPressed: () async {
                         final googleUser = await googleSignIn.signIn();
                         if (googleUser == null) return;
@@ -192,7 +192,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                         const Text(
                           'Already have an account?',
                           textAlign: TextAlign.center,
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: Colors.black),
                         ),
                         TextButton(
                           onPressed: () {
@@ -201,7 +201,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                           child: const Text(
                             'Login',
                             textAlign: TextAlign.center,
-                            style: TextStyle(color: Colors.white),
+                            style: TextStyle(color: Colors.black),
                           ),
                         ),
                       ],

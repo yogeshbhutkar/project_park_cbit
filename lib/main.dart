@@ -10,16 +10,12 @@ bool isSignedIn = false;
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   //Setting SysemUIOverlay
-  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-      systemStatusBarContrastEnforced: true,
-      systemNavigationBarColor: Color.fromARGB(255, 20, 19, 19),
-      systemNavigationBarDividerColor: Color.fromARGB(255, 20, 19, 19),
-      systemNavigationBarIconBrightness: Brightness.dark,
-      statusBarIconBrightness: Brightness.dark));
+  // SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
+  );
 
 //Setting SystmeUIMode
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge,
-      overlays: [SystemUiOverlay.top]);
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   FirebaseAuth.instance.authStateChanges().listen((User? user) {
