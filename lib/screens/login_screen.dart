@@ -143,6 +143,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                   RoundButton(
+                    txt: 'Continue',
                     onpress: () async {
                       try {
                         setState(() {

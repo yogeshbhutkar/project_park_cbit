@@ -64,3 +64,29 @@ const kTextFieldDecoration = InputDecoration(
     borderRadius: BorderRadius.all(Radius.circular(8)),
   ),
 );
+
+const kTextFieldDecorationForWelcome = InputDecoration(
+  filled: true,
+  fillColor: Colors.white,
+  hintStyle: TextStyle(
+    color: Color(0xff777777),
+  ),
+  border: OutlineInputBorder(
+    borderRadius: BorderRadius.all(Radius.circular(18)),
+  ),
+  enabledBorder: OutlineInputBorder(
+    borderSide: BorderSide(color: Colors.transparent),
+    borderRadius: BorderRadius.all(Radius.circular(18)),
+  ),
+  errorBorder: OutlineInputBorder(
+    borderRadius: BorderRadius.all(Radius.circular(18)),
+  ),
+  disabledBorder: OutlineInputBorder(
+    borderRadius: BorderRadius.all(Radius.circular(18)),
+  ),
+  contentPadding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 20.0),
+  focusedBorder: OutlineInputBorder(
+    borderSide: BorderSide(color: Color(0xff6A64AF), width: 2.0),
+    borderRadius: BorderRadius.all(Radius.circular(18)),
+  ),
+);

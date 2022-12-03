@@ -208,6 +208,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     ),
                   ),
                   RoundButton(
+                    txt: 'Continue',
                     onpress: () async {
                       if (validateUser()) {
                         try {

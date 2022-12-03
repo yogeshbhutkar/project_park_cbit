@@ -3,9 +3,11 @@ import 'package:google_fonts/google_fonts.dart';
 
 class RoundButton extends StatelessWidget {
   final VoidCallback onpress;
+  final String txt;
   const RoundButton({
     Key? key,
     required this.onpress,
+    required this.txt,
   }) : super(key: key);
 
   @override
@@ -39,7 +41,7 @@ class RoundButton extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Continue',
+              txt,
               style: GoogleFonts.barlow(
                 color: Colors.white,
                 fontWeight: FontWeight.w500,

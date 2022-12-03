@@ -32,7 +32,7 @@ class NotesApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Parking-app",
+      title: "Park IT",
       debugShowCheckedModeBanner: false,
       initialRoute: isSignedIn ? HomePage.id : LoginScreen.id,
       routes: {
